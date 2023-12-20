@@ -31,7 +31,7 @@ const SignIn = () => {
         .then((data) => {
             if (data.token) {
                 localStorage.setItem("jwtToken", data.token);
-                navigate("/");
+                window.location = "/";
             } else {
                 toast.error(data)
             }

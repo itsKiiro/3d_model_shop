@@ -69,7 +69,7 @@ const Navbar = () => {
     const handleLogout = () => {
         setShowUserSidebar(false);
         localStorage.removeItem("jwtToken");
-        navigate("/login")
+        window.location = "/login"
     }
 
     const handleCheckout = () => {
