@@ -41,6 +41,11 @@
     opacity: 0.7;
 }
 
+.navLink > a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .cartIndicator {
     width: 10px;
     height: 10px;
