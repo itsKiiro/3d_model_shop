@@ -104,7 +104,7 @@ const Navbar = () => {
                 <ul className="navLinks">
                     <li className="navLink" onClick={() => navigate("/")}>Shop</li>
                     <li className="navLink" onClick={() => navigate("/")}>Products</li>
-                    <li className="navLink" onClick={() => navigate("/")}>About</li>
+                    <li className="navLink"><a href="https://karall.dev" target="_blank">About</a></li>
                     <li className="navLink" onClick={() => navigate("/")}>Guide</li>
                 </ul>
             </div>
