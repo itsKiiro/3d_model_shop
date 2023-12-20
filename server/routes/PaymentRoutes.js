@@ -10,9 +10,12 @@ const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.MY_EMAIL,
-      pass: process.env.EMAIL_PASSWORD
+      pass: process.env.APP_PASSWORD
     }
 });
 
@@ -57,10 +60,12 @@ router.post('/webhook', express.raw({type: 'application/json'}), async (req, res
 
         case 'checkout.session.completed':
           const checkoutSessionCompleted = event.data.object;
+          const checkoutEmail = checkoutSessionCompleted.customer_details.email;
           const user = await User.findOne({ email: checkoutSessionCompleted.customer_details.email });
           const sessionId = event.data.object.id;
           const items = await stripe.checkout.sessions.listLineItems(sessionId);
-
+          
+          console.log(items)
 
           const attachments = items.data.map(item => {
             return {
@@ -69,14 +74,18 @@ router.post('/webhook', express.raw({type: 'application/json'}), async (req, res
             };
           });
 
+          console.log(attachments)
+          console.log(checkoutEmail)
+
           let mailOptions = {
-            from: process.env.MY_EMAIL,
-            to: user.email,
+            from: "karall.dev",
+            to: checkoutEmail,
             subject: 'Purchase Confirmation',
             text: 'Thank you for your purchase!',
             attachments: attachments
           };
           
+          console.log(mailOptions)
           
           transporter.sendMail(mailOptions, function(error, info){
             if (error) {
