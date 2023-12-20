@@ -1,0 +1,151 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    height: 80px;
+    color: #fff;
+    background-color: #004F44;
+    font-size: larger;
+}
+
+.navLinks {
+    display: flex;
+    gap: 4rem;
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.iconsContainer ion-icon {
+    font-size: larger;
+    cursor: pointer;
+}
+
+.iconContainer:hover {
+    opacity: 0.7;
+}
+
+.iconContainer {
+    position: relative;
+    padding-right: 4px;
+}
+
+.navLink:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.cartIndicator {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cartSidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 120px;
+    z-index: 1;
+    padding-bottom: 4rem;
+}
+
+.cartSidebar.open {
+    transform: translateX(0);
+}
+
+.cartItemContainer {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    padding-right: 1.4rem;
+    border-bottom: solid 1px black;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.cartItemImgContainer {
+    width: 40%;
+}
+
+.cartItemImgContainer > img {
+    width: 100%;
+    height: 100%;
+}
+
+.cartItemInfoContainer > button {
+    margin-top: 1rem;
+}
+
+.checkOutContainer {
+    color: black;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.checkOutContainer > button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.userSidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 120px;
+    z-index: 1;
+}
+
+.userSidebar.open {
+    transform: translateX(0);
+}
+
+.userInteractionContainer {
+    color: black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.logoContainer {
+    cursor: pointer;
+}
+
+@media(max-width: 1128px) {
+    .Navbar {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .navLinksContainer {
+        display: none;
+    }
+
+    .userSidebar, .cartSidebar {
+        width: 100%;
+    }
+}

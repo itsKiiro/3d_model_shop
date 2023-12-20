@@ -1,0 +1,44 @@
+.SignIn {
+    display: flex;
+    padding-top: 4rem;
+
+}
+
+.signInCanvasContainer {
+    width: 50%;
+}
+
+.signInContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #004F44;
+    padding: 3.4rem;
+    color: #fff;
+    gap: 2rem;
+    border-radius: 10px;
+}
+
+.signInContainer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.signInContainer > div > input {
+    padding: 0.2rem;
+    margin-top: 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+.signInContainer > div > button {
+    padding: 0.2rem;
+    margin-top: 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.signInContainer > div > button:hover {
+    border: solid 1px #fff;
+}

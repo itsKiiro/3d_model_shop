@@ -1,0 +1,45 @@
+.SignUpImpl {
+    display: flex;
+    height: calc(100vh - 120px);
+}
+
+.signInCanvasContainer {
+    width: 50%;
+}
+
+.signUpContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #004F44;
+    color: #fff;
+    gap: 2rem;
+    height: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    justify-content: center;
+}
+
+.signUpContainer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.signUpContainer > div > input {
+    padding: 0.2rem;
+    margin-top: 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+.signUpContainer > div > button {
+    padding: 0.2rem;
+    margin-top: 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.signUpContainer > div > button:hover {
+    border: solid 1px #fff;
+}

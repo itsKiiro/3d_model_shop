@@ -1,0 +1,148 @@
+.Start {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+    background-color: #004F44;
+    color: #fff;
+    height: calc(100vh - 120px);
+}
+
+.startHeaderContainer {
+    padding-top: 5.7rem;
+}
+
+.startHeaderContainer > h1 {
+    font-size: 4rem;
+}
+
+.leftSideContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 4rem;
+}
+
+.rightSideContainer {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: fit-content;
+    gap: 10px;
+    align-self: center;
+}
+
+.startButtons {
+    display: flex;
+    gap: 2rem;
+}
+
+.startButton {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.startButton:first-child {
+    background-color: #EEF7F5;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.startTagContainer {
+    position: absolute;
+    padding: 2rem;
+}
+
+.startTagContainer > span {
+    background-color: #004F44;
+    padding: 0.4rem;
+}
+
+.startArticleContainer {
+    background-color: #9EA9A7;
+    border-radius: 10px;
+    height: 17rem;
+    display: flex;
+    object-fit: cover;
+}
+
+.startArticleContainer > .ArticlePreview {
+    display: flex;
+    object-fit: contain;
+    width: 100%;
+}
+
+.startArticleContainer > .ArticlePreview > img {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.startArticleContainer > .ArticlePreview > img:last-child {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+    width: 100%;
+}
+
+.startArticleContainer:last-child {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+    width: 100%;
+}
+
+@media(max-width: 1280px) {
+    .startArticleContainer {
+        height: 200px;
+    }
+
+    .rightSideContainer {
+        align-self: center;
+    }
+}
+
+@media(max-width: 1128px) {
+    .Start {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        height: fit-content;
+        padding-bottom: 4rem;
+    }
+
+    .startHeaderContainer {
+        padding-top: 0rem;
+    }
+
+    .leftSideContainer, .rightSideContainer {
+        width: 100%;
+        padding-right: 0rem;
+    }
+
+    .rightSideContainer {
+        width: 100%;
+    }
+
+    .startArticleContainer {
+        height: 170px;
+    }
+
+    .startTagContainer {
+        padding: 1rem;
+    }
+
+    .startArticleContainer > .ArticlePreview {
+        width: 100%;
+    }
+
+    .startArticleContainer > .ArticlePreview > img {
+        width: 100%;
+    }
+}

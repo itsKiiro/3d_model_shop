@@ -1,0 +1,48 @@
+.NewArrivals {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.newArrivalsHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 2rem;
+}
+
+.newArticlesContainer {
+    display: flex;
+    padding-left: 10rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.newArticleContainer > .ArticleCard {
+    height: 400px;
+}
+
+.newArticleContainer > .ArticlePreview {
+    height: 17rem;
+    width: 17rem;
+}
+
+.newArticleContainer > .ArticlePreview > img {
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 1128px) {
+    .NewArrivals {
+        width: 100%;
+    }
+
+    .newArrivalsHeaderContainer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .newArticlesContainer {
+        padding-left: 2rem;
+    }
+}

@@ -1,0 +1,80 @@
+.ProductView {
+    margin-top: 4rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+    gap: 4rem
+}
+
+.productViewContainer {
+    width: 50%;
+    height: 24rem;
+}
+
+.productViewContainer > .ArticleCard {
+    height: 100%;
+    background-color: #9EA9A7;
+}
+
+.productInfoContainer {
+    width: 100%;
+}
+
+.productInfoHeaderContainer {
+    border-bottom: solid 1px black;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productInfoTextContainer {
+    margin-top: 2rem;
+}
+
+.productBuyButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    margin-top: 2rem;
+}
+
+.productBuyButtonContainer > p {
+    background-color: #20B526;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 17px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.productBuyButtonContainer > p:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+@media(max-width: 1128px) {
+    .ProductView {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 0;
+        padding-bottom: 7rem;
+    }
+
+    .productViewContainer {
+        width: 100%;
+        height: 14rem;
+    }
+
+}

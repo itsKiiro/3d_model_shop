@@ -1,0 +1,14 @@
+
+## NODE MODULES
+/node_modules
+
+
+## CONFIGURATION
+.env
+
+
+## MODELS
+/articles
+
+## POPULATE
+/populate

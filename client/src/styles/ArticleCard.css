@@ -1,0 +1,9 @@
+.articleTagContainer {
+    position: absolute;
+    padding: 2rem;
+}
+
+.ArticlePreview:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
