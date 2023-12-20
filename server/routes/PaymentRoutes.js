@@ -64,8 +64,6 @@ router.post('/webhook', express.raw({type: 'application/json'}), async (req, res
           const user = await User.findOne({ email: checkoutSessionCompleted.customer_details.email });
           const sessionId = event.data.object.id;
           const items = await stripe.checkout.sessions.listLineItems(sessionId);
-          
-          console.log(items)
 
           const attachments = items.data.map(item => {
             return {
@@ -74,9 +72,6 @@ router.post('/webhook', express.raw({type: 'application/json'}), async (req, res
             };
           });
 
-          console.log(attachments)
-          console.log(checkoutEmail)
-
           let mailOptions = {
             from: "karall.dev",
             to: checkoutEmail,
@@ -84,8 +79,6 @@ router.post('/webhook', express.raw({type: 'application/json'}), async (req, res
             text: 'Thank you for your purchase!',
             attachments: attachments
           };
-          
-          console.log(mailOptions)
           
           transporter.sendMail(mailOptions, function(error, info){
             if (error) {
