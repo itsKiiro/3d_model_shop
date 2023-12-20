@@ -46,6 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-right: 10rem;
+    gap: 10px;
 }
 
 .foundArticlesContainer > .ArticlePreview {
