@@ -4,6 +4,7 @@ import "../styles/SignIn.css";
 import { ToastContainer, toast } from "react-toastify";
 import { getApi } from "./ApiUrl";
 import { useNavigate } from "react-router-dom";
+import AnimatedArticle from "../models/AnimatedArticle";
 
 
 const SignIn = () => {
@@ -49,6 +50,12 @@ const SignIn = () => {
                     <pointLight />
                     <spotLight />
                     <hemisphereLight /> 
+                    <AnimatedArticle 
+                        scale={[0.4, 0.4, 0.4]}
+                        rotation={[0, Math.PI / 2.4, 0]}
+                        position={[0, -24, -40]}
+                        articleScene={getApi() + `/articles/fox.glb`}
+                    />
                 </Canvas>
             </div>
             <form className="signInContainer" onSubmit={handleLogin}>
