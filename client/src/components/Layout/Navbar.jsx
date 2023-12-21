@@ -105,7 +105,7 @@ const Navbar = () => {
                     <li className="navLink" onClick={() => navigate("/")}>Shop</li>
                     <li className="navLink" onClick={() => navigate("/")}>Products</li>
                     <li className="navLink"><a href="https://karall.dev" target="_blank">About</a></li>
-                    <li className="navLink" onClick={() => navigate("/")}>Guide</li>
+                    <li className="navLink" onClick={() => navigate("/guide")}>Guide</li>
                 </ul>
             </div>
             <div className="logoContainer" onClick={() => navigate("/")}>

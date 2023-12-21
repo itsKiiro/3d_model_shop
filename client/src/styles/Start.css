@@ -96,6 +96,11 @@
     width: 100%;
 }
 
+.startInfoText {
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
 @media(max-width: 1280px) {
     .startArticleContainer {
         height: 200px;

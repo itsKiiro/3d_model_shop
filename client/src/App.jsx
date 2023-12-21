@@ -6,6 +6,7 @@ import ArticleOverview from './pages/ArticleOverview';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import SuccessPage from './pages/SuccessPage';
+import Guide from './pages/Guide';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/success' element={<SuccessPage />} />
+        <Route path='/guide' element={<Guide />} />
       </Routes>
     </Router>
   )

@@ -25,13 +25,13 @@ const Start = () => {
                     <h1>3d Models made by hand</h1>
                 </div>
                 <div className="startInfoContainer">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                    <p className="startInfoText">Every 3D model displayed here is a creation of my own hands; for detailed information on how to get a product, please refer to the provided guide.</p>
                 </div>
                 <div className="startButtonContainer">
                     <ul className="startButtons">
                         <li className="startButton">Shop now</li>
-                        <li className="startButton">
-                            <span>Explore</span>
+                        <li className="startButton" onClick={() => navigate("/guide")}>
+                            <span>Guide</span>
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </li>
                     </ul>

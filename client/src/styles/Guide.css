@@ -1,0 +1,56 @@
+.Guide {
+    background-color: #004F44;
+    height: calc(100vh - 120px);
+    color: #fff;
+}
+
+.guideHeaderContainer {
+    font-size: x-large;
+}
+
+.guideContainer {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 2rem;
+}
+
+.guideHeaderContainer > h1 {
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.guideHeaderContainer > p {
+    letter-spacing: 2px;
+}
+
+.guideList {
+    margin-top: 4rem;
+}
+
+.guideListInfo {
+    margin-top: 1rem;
+    list-style: circle;
+}
+
+.guideInfoText {
+    width: 50%;
+    margin-top: 1rem;
+}
+
+
+@media(max-width: 1028px) {
+    .guideContainer {
+        padding: 0;
+    }
+
+    .Guide {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .guideInfoText {
+        width: 100%;
+    }
+}
