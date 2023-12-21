@@ -3,9 +3,6 @@
     height: calc(100vh - 120px);
 }
 
-.signInCanvasContainer {
-    width: 50%;
-}
 
 .signUpContainer {
     display: flex;
@@ -17,6 +14,7 @@
     padding-left: 4rem;
     padding-right: 4rem;
     justify-content: center;
+    width: 400px !important;
 }
 
 .signUpContainer > div {
@@ -42,4 +40,10 @@
 
 .signUpContainer > div > button:hover {
     border: solid 1px #fff;
+}
+
+.signUpCanvasContainer {
+    display: flex;
+    justify-content: center;
+    width: 50%;
 }

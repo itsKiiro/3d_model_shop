@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/SignIn.css";
 import { ToastContainer, toast } from "react-toastify";
 import { getApi } from "./ApiUrl";
@@ -10,6 +10,7 @@ import AnimatedArticle from "../models/AnimatedArticle";
 const SignIn = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [animationSection, setAnimationSection] = useState("idle");
 
     const navigate = useNavigate();
 
@@ -39,6 +40,14 @@ const SignIn = () => {
         })
     }
 
+    useEffect(() => {
+        if (username.length > 0 || password.length > 0) {
+            setAnimationSection("walk");
+        } else {
+            setAnimationSection("idle");
+        }
+    }, [username, password]);
+
 
     return (
         <div className="SignIn">
@@ -51,6 +60,7 @@ const SignIn = () => {
                     <spotLight />
                     <hemisphereLight /> 
                     <AnimatedArticle 
+                        animationSection={animationSection}
                         scale={[0.4, 0.4, 0.4]}
                         rotation={[0, Math.PI / 2.4, 0]}
                         position={[0, -24, -40]}

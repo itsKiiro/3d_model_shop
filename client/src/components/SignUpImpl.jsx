@@ -3,6 +3,8 @@ import "../styles/SignUpImpl.css";
 import { getApi } from "./ApiUrl";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { Canvas } from "@react-three/fiber";
+import AnimatedArticle from "../models/AnimatedArticle";
 
 const SignUpImpl = () => {
     const [username, setUsername] = useState("");
@@ -84,6 +86,22 @@ const SignUpImpl = () => {
                     <button type="submit">Sign Up</button>
                 </div>
             </form>
+            <div className="signUpCanvasContainer">
+                <Canvas>
+                    <directionalLight />
+                    <ambientLight />
+                    <pointLight />
+                    <spotLight />
+                    <hemisphereLight /> 
+                    <AnimatedArticle 
+                        
+                        scale={[8, 8, 8]}
+                        rotation={[0, 0, 0]}
+                        position={[0, -24, -40]}
+                        articleScene={getApi() + `/articles/rick.glb`}
+                    />
+                </Canvas>
+            </div>
         </div>
     )
 }

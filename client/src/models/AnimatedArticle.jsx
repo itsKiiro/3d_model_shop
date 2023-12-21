@@ -1,23 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import * as THREE from 'three';
 
 
 const AnimatedArticle = (props) => {
     const { scene, animations } = useGLTF(props.articleScene);
-    const { ref, mixer, names } = useAnimations(animations);
+    const { ref, mixer } = useAnimations(animations);
 
     useEffect(() => {
-        if (names.length > 0) {
-            mixer.clipAction(animations[0], ref.current).play();
-        }
-    }, [mixer, names, animations, ref]);
+        if (animations.length > 0) {
+            const action = mixer.clipAction(animations[0], ref.current);
 
-    const playSection = (start, end) => {
-        if (actionRef.current) {
-            actionRef.current.reset().setLoop(THREE.LoopRepeat, Infinity)
-                .startAt(start).endAt(end).play();
+            action.play()
         }
-    };
+    }, [mixer, animations, ref, props.animationSection]);
+
   
     return (
         <primitive 
