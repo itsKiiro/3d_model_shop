@@ -14,7 +14,7 @@
     padding-left: 4rem;
     padding-right: 4rem;
     justify-content: center;
-    width: 400px !important;
+    width: 400px;
 }
 
 .signUpContainer > div {
@@ -46,4 +46,27 @@
     display: flex;
     justify-content: center;
     width: 50%;
+}
+
+@media(max-width: 1028px) {
+    .SignUpImpl {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 34rem;
+    }
+
+    .signUpContainer {
+        width: 100%;
+        padding: 0;
+    }
+
+    .signUpCanvasContainer {
+        width: 100%;
+        height: 400px !important;
+    }
+
+    .signUpContainer > div {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }

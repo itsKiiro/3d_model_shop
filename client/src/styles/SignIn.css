@@ -42,3 +42,19 @@
 .signInContainer > div > button:hover {
     border: solid 1px #fff;
 }
+
+@media(max-width: 1028px) {
+    .SignIn {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .signInCanvasContainer {
+        width: 100%;
+    }
+
+    .signInContainer {
+        padding-bottom: 10rem;
+    }
+}
