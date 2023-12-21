@@ -18,12 +18,16 @@
     overflow-y: hidden;
 }
 
+.newArticleContainer {
+    height: 400px;
+}
+
 .newArticleContainer > .ArticleCard {
     height: 400px;
 }
 
 .newArticleContainer > .ArticlePreview {
-    height: 17rem;
+    height: 100%;
     width: 17rem;
 }
 

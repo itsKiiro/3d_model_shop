@@ -55,6 +55,7 @@ const SignUpImpl = () => {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         placeholder="Type here..."
+                        type="text"
                     />
                 </div>
                 <div>
@@ -63,6 +64,7 @@ const SignUpImpl = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Type here..."
+                        type="email"
                     />
                 </div>
                 <div>
@@ -70,7 +72,8 @@ const SignUpImpl = () => {
                     <input 
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}     
-                        placeholder="Type here..."               
+                        placeholder="Type here..."  
+                        type="password"             
                     />
                 </div>
                 <div>
@@ -78,7 +81,8 @@ const SignUpImpl = () => {
                     <input 
                         value={confirmedPassword}
                         onChange={(e) => setConfirmedPassword(e.target.value)}     
-                        placeholder="Type here..."              
+                        placeholder="Type here..."   
+                        type="password"           
                     />
                 </div>
                 <div>
